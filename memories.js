@@ -1,7 +1,7 @@
 /* Your photo archive lives here in GitHub. Add photos in the photos/ folder, then
    add one entry per photo below. The image path is relative to this file. */
 window.MEMORIES = [
-  { image: "", caption: "That first little moment when I knew there was something special about you.", date: "October 26, 2024", tag: "the beginning" },
+  { image: "first-Homecoming.jpeg", caption: "That first little moment when I knew there was something special about you. (we were really awkward in this)", date: "September 28, 2024", tag: "first hoco" },
   { image: "", caption: "Somehow my favorite place is wherever you are.", date: "A day I'll keep forever", tag: "my person" },
   { image: "", caption: "I hope we never run out of ordinary days together.", date: "One of our days", tag: "just us" }
 ];
