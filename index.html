@@ -1,5 +1,88 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="theme-color" content="#fbf6ef"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="heart.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><title>A little love note for Rachel</title></head><body>
-<div id="gate" class="gate"><div class="gate-card"><span class="tiny-heart">♥</span><p class="eyebrow">A LITTLE KEEPSAKE</p><h1>Just for you, Rachel</h1><p class="gate-copy">A tiny corner of the world that belongs to us.</p><form id="pass-form"><label for="passcode">Our special date</label><input id="passcode" type="password" inputmode="numeric" autocomplete="one-time-code" maxlength="4" placeholder="MMDD" required><button class="button primary" type="submit">Come on in <span>♡</span></button><p id="gate-error" class="error" aria-live="polite"></p></form><p class="gate-foot">Hint: the day our story began</p></div></div>
-<div id="app" class="app hidden"><header class="topbar"><a class="wordmark" href="#home" aria-label="Home">r <span>♡</span> &amp; me</a><div class="top-actions"><button id="theme-toggle" class="icon-button" aria-label="Switch color theme">☾</button><button id="install-button" class="icon-button hidden" aria-label="Add to Home Screen">＋</button></div></header><main id="home"><section class="hero"><div class="hero-copy"><p class="eyebrow">A LITTLE PLACE FOR US</p><h1>Hi, Rachel <span class="wave">♡</span></h1><p class="intro">A pocketful of us, whenever you need it.</p></div><div class="days-badge"><span class="badge-heart">♥</span><strong id="days-together">—</strong><span>days together</span></div></section><section class="memory-section"><div class="section-heading"><div><p class="eyebrow">PULLED FROM OUR LITTLE ARCHIVE</p><h2>One of my favorite us moments</h2></div><span class="sparkle">✳</span></div><article id="polaroid" class="polaroid"><div class="photo-wrap"><img id="memory-image" src="" alt="A favorite memory of us"><span id="photo-placeholder" class="photo-placeholder hidden">Your first memory<small>Add your photos to the archive when you're ready</small></span></div><div class="polaroid-caption"><p id="memory-caption" class="handwritten"></p><div class="memory-meta"><time id="memory-date"></time><span id="memory-tag" class="tag"></span></div></div></article><button id="another-button" class="button secondary">Show me another <span>↗</span></button><p class="shuffle-note">A new little memory, every time you visit.</p></section><section class="love-reason"><span class="reason-flower">✿</span><div><p class="eyebrow">TODAY'S LITTLE REMINDER</p><p id="reason-text" class="reason-text"></p></div></section><section class="open-when"><div class="section-heading"><div><p class="eyebrow">A NOTE, WHENEVER YOU NEED ONE</p><h2>Open when…</h2></div><span class="envelope">✉</span></div><div class="note-list" id="note-list"></div><article id="note-paper" class="note-paper hidden"><button id="close-note" class="close-note" aria-label="Close note">×</button><p class="eyebrow">A NOTE FROM ME</p><h3 id="note-title"></h3><p id="note-content" class="note-content"></p><span class="note-signoff">Always yours, ♡</span></article></section><section class="countdown"><p class="eyebrow">OUR NEXT LITTLE MILESTONE</p><p id="countdown-text" class="countdown-text"></p><span class="countdown-heart">♡</span></section><footer><p>Made with all my heart, for you.</p><span>Since October 26, 2024 · <a href="admin.html">Our photo archive</a></span></footer></main><div id="anniversary-modal" class="modal hidden" role="dialog" aria-modal="true"><div class="heart-field"></div><div class="modal-card"><button id="close-modal" class="close-modal" aria-label="Close">×</button><span class="modal-heart">♥</span><p class="eyebrow">ANOTHER PAGE IN OUR STORY</p><h2 id="modal-title"></h2><p id="modal-copy"></p><button id="modal-done" class="button primary">Here's to us <span>♡</span></button></div></div><div id="toast" class="toast" role="status"></div></div><script src="memories.js"></script><script src="app.js"></script><script src="sw-register.js"></script></body></html>
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#fbf6ef">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="heart.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>A little love note for Rachel</title>
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="topbar">
+      <a class="wordmark" href="#home" aria-label="Home">Rachel and me</a>
+      <button id="install-button" class="install-button hidden" aria-label="Install this keepsake">Add to Home Screen</button>
+    </header>
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">A LITTLE PLACE FOR US</p>
+          <h1>Hi, Rachel</h1>
+          <p class="intro">A pocketful of us, whenever you need it.</p>
+        </div>
+        <div class="days-badge"><strong id="days-together">-</strong><span>days together</span></div>
+      </section>
+      <section class="memory-section">
+        <div class="section-heading">
+          <div><p class="eyebrow">A FAVORITE US MOMENT</p><h2>One of my favorite memories</h2></div>
+        </div>
+        <article id="polaroid" class="polaroid">
+          <div class="photo-wrap">
+            <img id="memory-image" src="" alt="A favorite memory of us">
+            <span id="photo-placeholder" class="photo-placeholder hidden">Your first memory<small>Add photos to the archive when you are ready</small></span>
+          </div>
+          <div class="polaroid-caption">
+            <p id="memory-caption" class="handwritten"></p>
+            <div class="memory-meta"><time id="memory-date"></time><span id="memory-tag" class="tag"></span></div>
+          </div>
+        </article>
+        <button id="another-button" class="button secondary">Show me another</button>
+        <p class="shuffle-note">A new little memory, every time you visit.</p>
+      </section>
+      <section class="love-reason">
+        <div><p class="eyebrow">TODAY'S LITTLE REMINDER</p><p id="reason-text" class="reason-text"></p></div>
+      </section>
+      <section class="open-when">
+        <div class="section-heading">
+          <div><p class="eyebrow">A NOTE, WHENEVER YOU NEED ONE</p><h2>Open when...</h2></div>
+        </div>
+        <div class="note-list" id="note-list"></div>
+        <article id="note-paper" class="note-paper hidden">
+          <button id="close-note" class="close-note" aria-label="Close note">Close</button>
+          <p class="eyebrow">A NOTE FROM ME</p><h3 id="note-title"></h3>
+          <p id="note-content" class="note-content"></p>
+          <span class="note-signoff">Always yours</span>
+        </article>
+      </section>
+      <section class="countdown">
+        <p class="eyebrow">OUR NEXT LITTLE MILESTONE</p>
+        <p id="countdown-text" class="countdown-text"></p>
+      </section>
+      <footer>
+        <p>Made with all my heart, for you.</p>
+        <span>Since October 26, 2024 | <a href="admin.html">Our photo archive</a></span>
+      </footer>
+    </main>
+    <div id="anniversary-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="heart-field" aria-hidden="true"></div>
+      <div class="modal-card">
+        <button id="close-modal" class="close-modal" aria-label="Close anniversary message">Close</button>
+        <p class="eyebrow">ANOTHER PAGE IN OUR STORY</p>
+        <h2 id="modal-title"></h2><p id="modal-copy"></p>
+        <button id="modal-done" class="button primary">Here's to us</button>
+      </div>
+    </div>
+    <div id="toast" class="toast" role="status"></div>
+  </div>
+  <script src="memories.js"></script>
+  <script src="app.js"></script>
+  <script src="sw-register.js"></script>
+</body>
+</html>
 
