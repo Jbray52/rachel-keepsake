@@ -1,4 +1,4 @@
-const CACHE='rachel-keepsake-v5';
+const CACHE='rachel-keepsake-v6';
 const FILES=['./','./index.html','./style.css','./memories.js','./app.js','./admin.html','./manifest.webmanifest','./heart.svg'];
 
 self.addEventListener('install', event => {

@@ -10,7 +10,6 @@ function startApp() {
   localStorage.setItem('rachelVisits', String(visits));
   renderMemory(true);
   renderDays();
-  renderReason();
   renderNotes();
   renderCountdown();
   checkAnniversary();
@@ -91,13 +90,6 @@ function dayNumber() {
 
 function renderDays() {
   $('#days-together').textContent = dayNumber().toLocaleString();
-}
-
-function renderReason() {
-  const reasons = window.LOVE_REASONS || [];
-  if (!reasons.length) return;
-  const dayOfYear = Math.floor((today() - new Date(today().getFullYear(), 0, 0)) / 86400000);
-  $('#reason-text').textContent = reasons[dayOfYear % reasons.length];
 }
 
 function renderNotes() {
